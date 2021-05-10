@@ -1,0 +1,32 @@
+body {
+  text-align: center;
+  background: aqua;
+}
+
+.timer {
+  font-family: sans-serif;
+  color: #fff;
+  font-size: 30px; 
+  padding-top: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  margin-right: 10px;
+}
+
+.value {
+  padding: 20px;
+  border-radius: 20px;
+  background: yellow;
+  color: black;
+  display: inline-block;
+}
+
+.label {
+  display: block;
+  padding-top: 5px;
+  font-size: 16px;
+}
