@@ -6,11 +6,17 @@ class CountdownTimer {
   }
 
   start() {
-    setInterval(() => {
+    let interval = "";
+    interval = setInterval(() => {
       const currentTime = Date.now();
       const deltaTime = this.targetDate - currentTime;
       this.getTimesComponents(deltaTime);
-    }, 1000);
+      if (this.targetDate - currentTime <= 0) {
+        clearInterval(interval);
+        this.getTimesComponents(0)
+  }
+    }, 1000 );
+
   }
 
   getTimesComponents(time) {
@@ -46,5 +52,6 @@ class CountdownTimer {
 }
 new CountdownTimer({
   selector: "#timer-1",
-  targetDate: new Date("Jul 17, 2021"),
+  targetDate: new Date("Jul 31, 2021"),
 });
+
